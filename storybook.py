@@ -3,7 +3,7 @@ import os
 import streamlit as st
 from openai import OpenAI
 
-my_secret = os.environ['OPENAI_API_KEY']
+my_secret = st.secrets['OPENAI_API_KEY']
 client = OpenAI(api_key=my_secret)
 
 #Story generator method
